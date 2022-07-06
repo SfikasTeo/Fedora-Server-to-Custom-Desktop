@@ -18,6 +18,7 @@ Improve the btrfs performance:
 
 Set Hostname:
 	sudo nvim/nano /etc/hostname
+	or echo "Hostname" >> /etc/hostname
 
 Set Grub Resolution: (may work)
 	nvim /etc/default/grub -> ....loglevel=3 quiet video=1920x1080" and
