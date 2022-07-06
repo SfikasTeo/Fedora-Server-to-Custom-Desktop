@@ -1,0 +1,27 @@
+Run the installation for the Fedora Server:
+	1) Easy possibility to add language support
+	2) Add user to wheel and sudo password
+	3) Easy custom partitioning and btrfs:
+		(Maybe create the /boot standard) -> ext4
+		Create the partition /boot/efi -> efi
+		Create the default btrfs subvolumes:	
+			@ -> mounted at /
+			@home -> mounted at /home
+
+UPGRADE the distrubution:
+	sudo dnf upgrade
+
+Improve the btrfs performance:
+	nvim/nano at /etc/fstab
+		add ssd,noatime,space_cache=v2,discard=async,compress=zstd,subvolume=@
+		add ssd,noatime,space_cache=v2,discard=async,compress=zstd,subvolume=@home
+
+Set Hostname:
+	sudo nvim/nano /etc/hostname
+
+Set Grub Resolution: (may work)
+	nvim /etc/default/grub -> ....loglevel=3 quiet video=1920x1080" and
+	maybe change the GRUB_GFXMODE -> the wanted resolution
+	sudo grub-mkconfig -o /boot/grub2/grub.cfg
+
+Install basic Programms!
