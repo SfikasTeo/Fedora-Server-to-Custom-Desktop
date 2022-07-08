@@ -1,7 +1,25 @@
 #!/bin/bash
 
-#Enable the rpmfusion depository for vlc or ditch vlc for mplayer2
-#sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm vlc
-sudo dnf install fira-code-fonts kitty nitrogen picom Xorg xorg-x11-xinit xorg-x11-xauth gwe xorg-x11-drivers dnf-plugins-core \
-                 bspwm sxhkd polybar rofi pcmanfm fish starship gcc python-unversioned-command timeshift xrandr pulseaudio flameshot
- 
+# Check if Script is Run as Root
+if [[ $EUID -ne 0 ]]; then
+  echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
+  exit 1
+fi
+
+# Updating System
+dnf update -y
+
+#Basic programms
+dnf install kitty nitrogen picom bspwm sxhkd polybar rofi pcmanfm gcc python-unversioned-command timeshift
+
+#fish shell + less important binaries
+sudo dnf install fish starship flameshot fira-code-fonts zip unzip
+
+#X11
+dnf insstall Xorg xorg-x11-xinit xorg-x11-xauth xorg-x11-drivers xrandr
+
+#Breave-bin
+dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/ #add brave repository
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc #add repository key
+sudo dnf install brave-browser
