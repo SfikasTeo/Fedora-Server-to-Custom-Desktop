@@ -13,7 +13,7 @@ dnf update -y
 dnf install kitty nitrogen picom bspwm sxhkd polybar rofi pcmanfm gcc python-unversioned-command timeshift
 
 #fish shell + less important binaries
-sudo dnf install fish starship flameshot fira-code-fonts zip unzip
+sudo dnf install fish starship flameshot fira-code-fonts zip unzip wget
 
 #X11
 dnf insstall Xorg xorg-x11-xinit xorg-x11-xauth xorg-x11-drivers xrandr
