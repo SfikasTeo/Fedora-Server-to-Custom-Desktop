@@ -4,7 +4,7 @@
 
 # Check if Script is Run as Root
 if [[ $EUID -ne 0 ]]; then
-  echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
+  echo "You must be a root user to run this script, please use sudo" 2>&1
   exit 1
 fi
 
@@ -12,13 +12,13 @@ fi
 dnf update -y
 
 #Basic programms
-dnf install kitty nitrogen picom bspwm sxhkd polybar rofi pcmanfm gcc python-unversioned-command timeshift
+dnf install kitty nitrogen picom polybar rofi pcmanfm gcc python-unversioned-command timeshift
 
 #fish shell + less important binaries
-sudo dnf install fish starship flameshot fira-code-fonts zip unzip wget
+sudo dnf install fish starship flameshot fira-code-fonts zip unzip wget bpytop lm_sensors
 
 #X11
-dnf insstall Xorg xorg-x11-xinit xorg-x11-xauth xorg-x11-drivers xrandr arandr
+dnf insstall Xorg xorg-x11-xinit xorg-x11-xauth xorg-x11-drivers xrandr arandr xsensors
 
 #Breave-bin
 dnf install dnf-plugins-core
