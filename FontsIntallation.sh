@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 # Installing fonts
-sudo dnf install fontawesome-fonts fontawesome-fonts-web
+sudo dnf install fontawesome-fonts fontawesome-fonts-web mscore-fonts -y
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
