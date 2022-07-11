@@ -12,7 +12,7 @@ fi
 dnf update -y
 
 #Basic programms
-dnf install kitty nitrogen picom polybar rofi pcmanfm gcc python-unversioned-command timeshift
+dnf install kitty feh picom polybar rofi pcmanfm gcc python-unversioned-command timeshift
 
 #fish shell + less important binaries
 sudo dnf install fish starship flameshot fira-code-fonts zip unzip wget bpytop lm_sensors
