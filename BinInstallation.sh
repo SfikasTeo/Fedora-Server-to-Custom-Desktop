@@ -15,7 +15,7 @@ dnf update -y
 dnf install kitty feh picom polybar rofi pcmanfm gcc python-unversioned-command timeshift
 
 #fish shell + less important binaries
-sudo dnf install fish starship flameshot fira-code-fonts zip unzip wget bpytop lm_sensors
+sudo dnf install fish flameshot fira-code-fonts zip unzip wget bpytop lm_sensors
 
 #X11
 dnf insstall Xorg xorg-x11-xinit xorg-x11-xauth xorg-x11-drivers xrandr arandr xsensors
