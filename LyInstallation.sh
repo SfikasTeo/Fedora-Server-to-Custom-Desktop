@@ -6,6 +6,9 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+#Install basic dependencies
+sudo dnf install pam-devel xcb-util-devel
+
 #clone the repository
 cd ~
 git clone --recurse-submodules https://github.com/nullgemm/ly
