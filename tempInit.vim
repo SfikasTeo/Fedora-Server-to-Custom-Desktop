@@ -14,7 +14,7 @@ call plug#end()
 	set cursorline			" highlight current cursorline
 	set nowrap			" Long lines not wrapped
 	
-	“ colorscheme in action:
+	“ theme in action:
 	colorscheme dracula
 	set termguicolors
 	
