@@ -1,10 +1,10 @@
 " --------------- PLUG ---------------
 
-call plug#begin('~/.config/nvim/plugged')
-	Plug 'dracula/vim'					"Installed Themes
-	Plug 'preservim/nerdcommenter'				"Easy multiline commenting tool
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}		"a fast code completion engine
-call plug#end()
+	call plug#begin('~/.config/nvim/plugged')
+		Plug 'dracula/vim'					"Installed Themes
+		Plug 'preservim/nerdcommenter'				"Easy multiline commenting tool
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}		"a fast code completion engine
+	call plug#end()
 
 " --------------- THEME ---------------
 
