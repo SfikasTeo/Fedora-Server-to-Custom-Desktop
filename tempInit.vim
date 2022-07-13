@@ -8,11 +8,6 @@ call plug#end()
 
 " --------------- THEME ---------------
 
-	“ color schemes
-	if (has(“termguicolors”))
-		set termguicolors
-	endif
-
 	" General visuals
 	syntax enable			" Same as syntax on - default
 	set number 			" add line numbers
@@ -21,7 +16,8 @@ call plug#end()
 	
 	“ colorscheme in action:
 	colorscheme dracula
-
+	set termguicolors
+	
 " --------------- GENERAL SETTINGS ---------------
 	" General
 	set nocompatible			" disable compatibility to old-time vi
